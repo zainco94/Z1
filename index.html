@@ -1,130 +1,126 @@
-<!DOCTYPE html><html class="embed"><head>
-        <script defer="" src="js/mux-player.min.js"></script>
-        <script defer="" id="playerjs" src="js/player-0.1.0.min.js"></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <script>
-          
-if (window.top === window.self) {
-  document.head.insertAdjacentHTML('beforeend', `
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" blocking="render" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" />
-  <link rel="stylesheet" blocking="render" href="/playback-page.css" />`);
-  const scriptEl = document.createElement('script');
-  scriptEl.src = '/playback-page.js';
-  scriptEl.defer = true;
-  document.head.appendChild(scriptEl);
-  document.documentElement.classList.remove('embed');
-}
-;
-        </script>
-        <style>
-          html,
-          body {
-            height: 100%;
-            background-color: #000;
-          }
-          body {
-            margin: 0px;
-            overflow: hidden;
-          }
-          html.embed mux-player {
-            display: flex;
-            height: 100%;
-            width: 100%;
-          }
-          html.embed img {
-            display: block;
-            margin: auto;
-            height: calc(100vw / var(--blur-up-aspect-ratio));
-            max-height: 100%;
-            width: 100%;
-            max-width: calc(100vh * var(--blur-up-aspect-ratio));
-            background: center / contain no-repeat var(--blur-up-url);
-          }
-          html.embed .e-hide {
-            display: none;
-          }
-          html.embed .e-contents {
-            display: contents;
-          }
-          :root,
-        img[slot='poster'] {
-          --blur-up-aspect-ratio: calc(1920 / 1080);
-          --blur-up-url: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="b" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="20"/><feComponentTransfer><feFuncA type="discrete" tableValues="1 1"/></feComponentTransfer></filter><g filter="url(%23b)"><image width="100%" height="100%" preserveAspectRatio="xMidYMid slice" href="data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQAAkAAQAcJaQAAxZiDk18AAD+/tKBR3ljG3ZZy/Q7CYAA"/></g></svg>');
-        }
-        </style>
-        <meta property="og:url" content="https://player.mux.com/EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs?metadata-video-title=Test%2520VOD&metadata-viewer-user-id=user-id-007">
-<meta property="og:title" content="Mux Player">
-<meta property="og:image" content="images/thumbnail.webp">
-<meta property="og:type" content="video">
-<meta property="og:video" content="index.html">
-<meta property="og:video:secure_url" content="index.html">
-<meta property="og:video:type" content="video/mp4">
-<meta property="og:video:width" content="1920">
-<meta property="og:video:height" content="1080">
-<meta name="twitter:card" content="player">
-<meta name="twitter:player" content="https://player.mux.com/EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs?metadata-video-title=Test%2520VOD&metadata-viewer-user-id=user-id-007">
-<meta name="twitter:player:width" content="1920">
-<meta name="twitter:player:height" content="1080">
-<link rel="alternate" type="application/json+oembed" href="https://player.mux.com/api/oembed?url=https%3A%2F%2Fplayer.mux.com%2FEcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs%3Fmetadata-video-title%3DTest%252520VOD%26metadata-viewer-user-id%3Duser-id-007&format=json" title="Mux Player">
-<link rel="alternate" type="application/xml+oembed" href="https://player.mux.com/api/oembed?url=https%3A%2F%2Fplayer.mux.com%2FEcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs%3Fmetadata-video-title%3DTest%252520VOD%26metadata-viewer-user-id%3Duser-id-007&format=xml" title="Mux Player">
-<title>Mux Player</title>
-        <link rel="icon" href="images/favicon.ico" sizes="any">
-        <link rel="icon" href="images/icon.svg" type="image/svg+xml">
-        <meta name="theme-color" content="black">
-        <meta name="color-scheme" content="dark">
-      </head>
-      <body>
-        <div class="layout e-contents">
-          <div class="guides"></div>
-          <div class="content e-contents">
-            <main class="e-contents">
-              <div class="player-container e-contents"><mux-player playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs" custom-domain="mux.com" player-software-name="mux-player-iframe" player-software-version="3.2.4" metadata-video-title="Test VOD" metadata-viewer-user-id="user-id-007" poster=""><img slot="poster" decoding="async" src="images/thumbnail.webp" alt="" aria-hidden="true"> </mux-player></div>
-            </main>
-            <footer class="e-hide">
-              <div class="footer-container">
-                <button class="copy-link" disabled="" onclick="copyCurrentUrl()">
-                  <span class="copy-icon"></span>
-                  <span class="copy-text" style="width:9ch;">Copy Link</span>
-                  <span class="copied-text" style="width:9ch;">Copied!</span>
-                </button>
-                <a href="https://www.mux.com/" class="powered-by-mux desktop group">
-                  Powered by <span class="logo"></span>
-                </a>
-              </div>
-            </footer>
-          </div>
-          <a href="https://www.mux.com/" class="e-hide powered-by-mux mobile group">
-            Powered by <span class="logo"></span>
-          </a>
-        </div>
-        <script>
-          const muxPlayer = document.querySelector('mux-player');
-          if (!muxPlayer.hasAttribute('player-init-time') && performance) {
-            if (performance.timeOrigin) {
-              muxPlayer.setAttribute('player-init-time', performance.timeOrigin.toString());
-            } else if (performance.timing) {
-              muxPlayer.setAttribute('player-init-time', performance.timing.navigationStart.toString());
-            }
-          }
-          const script = document.getElementById('playerjs');
-          const onPlayerLoadStart = () => {
-            const adapter = playerjs.HTML5Adapter(muxPlayer);
-            adapter.ready();
-          };
-          script.addEventListener('load', () => {
-            if (muxPlayer.readyState >= 1) {
-              onPlayerLoadStart();
-            } else {
-              muxPlayer.addEventListener('loadstart', onPlayerLoadStart);
-            }
-          });
-        </script>
-        <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"VideoObject","contentUrl":"https://stream.mux.com/EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs.m3u8","thumbnailUrl":"https://image.mux.com/EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs/thumbnail.webp"}
-  </script>
-      
+         <div id="sidebar1">
+        <div class="withoutbg left" style="padding-left:30px">
+            <h3>Related videos</h3> <!--title-->
+            
+                <div class="videobox">
+                    <a href="https://v.aflam.news/s6wy9cm74hek.html">
+                        <span class="video200" style="background: url(images/s6wy9cm74hek_t.jpg) no-repeat;">
+                        	<span>02:42:27</span>
+                        </span>
+                    </a>
+                    <a href="https://v.aflam.news/s6wy9cm74hek.html" class="title">Titus 1999 1080p</a>
+                </div>
+            
+                <div class="videobox">
+                    <a href="https://v.aflam.news/tqzpfr0ts3mw.html">
+                        <span class="video200" style="background: url(images/tqzpfr0ts3mw_t.jpg) no-repeat;">
+                        	<span>01:39:13</span>
+                        </span>
+                    </a>
+                    <a href="https://v.aflam.news/tqzpfr0ts3mw.html" class="title">To Be Or Not To Be 1942 1080p</a>
+                </div>
+            
+                <div class="videobox">
+                    <a href="https://v.aflam.news/ic8macuyjqzr.html">
+                        <span class="video200" style="background: url(images/ic8macuyjqzr_t.jpg) no-repeat;">
+                        	<span>01:37:37</span>
+                        </span>
+                    </a>
+                    <a href="https://v.aflam.news/ic8macuyjqzr.html" class="title">10 Things I Hate About You 1999 1080p</a>
+                </div>
+            
+        </div>  
+    </div>
+
+<script type="text/javascript">//jwplayer.defaults = { "plugins": {
+//    "ping": {}
+//  } };
+  jwplayer("vplayer").setup({
+    sources: [{file:"https://vroba-cdn-cash-v9-b7q.dialymotion.online/hls/ftg4zvnipbh473xqltyuahtyfy4aiq45oo357kcj3,gbjhhtupynnur7dl6ea,njjfhtupynd4ctuntua,.urlset/master.m3u8",label:"480p"},{file:"https://vroba-cdn-cash-v9-b7q.dialymotion.online/hls/ftg4zvnipbh473xqltyuahtyfy4aiq45oo357kcj3,gbjhhtupynnur7dl6ea,njjfhtupynd4ctuntua,.urlset/master.m3u8",label:"320p"}],
+    image: "https://i.giphy.com/YwCbGTL2dKWpMH5VMr.webp",
+    width: "100%", 
+    height: "100%",
+    stretching: "exactfit",
+    duration: "11689.77",
+    //aspectratio: "16:9",
+    preload: 'auto',
+    androidhls: "true",
+    hlshtml: "true",
+    primary: "html5",
+    startparam: "start"
     
+    ,tracks: []
+    ,"sharing": {code: "%3CIFRAME SRC%3D%22https%3A%2F%2Fv.aflam.news%2Fembed-73tpzp0ge3nl.html%22 FRAMEBORDER%3D0 MARGINWIDTH%3D0 MARGINHEIGHT%3D0 SCROLLING%3DNO WIDTH%3D640 HEIGHT%3D360 allowfullscreen%3E%3C%2FIFRAME%3E", link: "https://v.aflam.news/73tpzp0ge3nl.html", sites: [] },abouttext:"", aboutlink:"https://v.aflam.news",cast: {},playbackRateControls: "true", playbackRates: [0.5, 1, 2, 3]
+  });
+var vvplay,vvad,x2ok=0;
+var vastdone1=0,vastdone2=0;
+var player = jwplayer();
+player.on('time', function(x) { 
+    if(5>0 && x.position>=5 && vvad!=1){vvad=1;$('div.video_ad_fadein').fadeIn('slow');}
+    if(x2ok==0 && x.position>=5260 && x.position<=(5260+2)){x2ok=x.position;}
+    
+});
+player.on('play', function(x) { doPlay(x); });
+player.on('complete', function() { $('div.video_ad').show();  });
+
+function doPlay(x)
+{
+  $('div.video_ad').hide();
+  if(vvplay)return;
+  vvplay=1;
+  adb=0;
+  if( window.cRAds === undefined ){ adb=1; }
+  $.get('https://v.aflam.news/dl?op=view&file_code=73tpzp0ge3nl&hash=800710-0-0-1740793150-85be24b0460aa7d0d3c2b41d37237d3d&embed=&adb='+adb, function(data) {$('#fviews').html(data);} );
+  
+  
+}
+    player.on('ready', function(){
+    		
+
+            //var mybtn=$("<div style='padding-left: 5px; margin-right: 5px; margin-top: 10px; background-image: url(/images/ico.png);background-repeat: no-repeat;' class='jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-logo'></div>");
+            //mybtn.click(showCCform);
+            //$(".jw-controlbar-right-group").append(mybtn);
+    });
+
+
+
+
+</script>
+
+
+<script type="text/javascript" language="JavaScript">
+$("#embed_div textarea").focus(function (){ $(this).select(); })
+//document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+var tab_cookie='tab_down';
+
+$('ul.tabs').on('click', 'li:not(.current)', function() {
+    $(this).addClass('current').siblings().removeClass('current')
+        .parents('div.section').find('div.box').eq($(this).index()).fadeIn(150).siblings('div.box').hide();
+});
+
+$("#iew,#ieh").change(function (){
+    var ww = $("#iew").val();
+    var hh = $("#ieh").val();
+    ww = ww.replace(/\D/g,'');
+    hh = hh.replace(/\D/g,'');
+    if(!ww)ww=640;
+    if(!hh)hh=360;
+    tt = $("#iet").val();
+    tt = tt.replace(/ WIDTH=\d+ HEIGHT=\d+ /,' WIDTH='+ww+' HEIGHT='+hh+' ');
+    $("#iet").val(tt);
+});
+
+
+</script>
+<script language="JavaScript" type="text/javascript" src="js/tabber.js"></script>
+
+
+<script>
+$(function() {
+ 
+});
+</script>
+
+
+</div>  <!--end conteiner-->
   </body></html>
