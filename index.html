@@ -12,13 +12,25 @@
     height: "100%",
     stretching: "exactfit",
     preload: 'auto',
+    live: true,  // ده اللي بيخلي المشغل يعامله كبث مباشر
     androidhls: true,
     hlshtml: true,
     primary: "html5",
     startparam: "start",
-    live: true  // ده اللي بيخلي المشغل يعامله كبث مباشر
 });
-
+jwplayer("vplayer").setup({
+    sources: [{file:"https://www.dailymotion.com/cdn/live/video/x856hbh.m3u8?sec=ErfKTyq4Yu2mt2drMwMpVEdNgHx3HNEbtFGzOZ4ijF16QzDWBtNow24CKFPzm4hb4FsNVJb2IKZ29rZju_JgSw&dmTs=315748&dmV1st=e1ac71b4-bbc8-42e7-b37f-de70ee54d3a1",label:"480p"},{file:"",label:"320p"}],
+    image: "https://i.giphy.com/YwCbGTL2dKWpMH5VMr.webp",
+    width: "100%", 
+    height: "100%",
+    stretching: "exactfit",
+    duration: "999999999",
+    //aspectratio: "16:9",
+    preload: 'auto',
+    androidhls: "true",
+    hlshtml: "true",
+    primary: "html5",
+    startparam: "start"
     
     ,tracks: []
     ,"sharing": {code: "%3CIFRAME SRC%3D%22https%3A%2F%2Fv.aflam.news%2Fembed-73tpzp0ge3nl.html%22 FRAMEBORDER%3D0 MARGINWIDTH%3D0 MARGINHEIGHT%3D0 SCROLLING%3DNO WIDTH%3D640 HEIGHT%3D360 allowfullscreen%3E%3C%2FIFRAME%3E", link: "https://v.aflam.news/73tpzp0ge3nl.html", sites: [] },abouttext:"", aboutlink:"https://v.aflam.news",cast: {},playbackRateControls: "true", playbackRates: [0.5, 1, 2, 3]
